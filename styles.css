@@ -285,3 +285,34 @@ h1, h2, h3, p {
 .project-btn {
   display: none;
 }
+
+/* ===== PROJECT HOVER OVERLAY ===== */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11,11,13,0.3),
+    rgba(11,11,13,0.95)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.35s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-overlay,
+.project-card:focus-visible .project-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
