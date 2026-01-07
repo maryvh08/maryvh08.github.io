@@ -376,3 +376,40 @@ h1, h2, h3, p {
   background: rgba(124,140,255,0.12);
   color: var(--accent);
 }
+
+/* ===== CONTACT FORM ===== */
+.contact-form {
+  margin-top: 2.5rem;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  color: var(--text-main);
+  font-family: inherit;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
