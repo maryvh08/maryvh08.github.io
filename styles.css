@@ -172,3 +172,23 @@ body {
   line-height: 1.5;
 }
 
+.contact {
+  padding: 6rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.contact p {
+  color: #b3b3b3;
+  margin: 1.5rem 0 2.5rem;
+  line-height: 1.6;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
