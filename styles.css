@@ -191,17 +191,15 @@ h2 {
   margin: 0.8rem 0 1rem;
 }
 
-.project-tech img {
+.project-tech svg {
   width: 22px;
   height: 22px;
   opacity: 0.8;
-  filter: grayscale(100%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.project-card:hover .project-tech img {
+.project-card:hover svg {
   opacity: 1;
-  filter: grayscale(0%);
   transform: translateY(-2px);
 }
 
