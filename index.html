@@ -5,149 +5,181 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marycarmen Vives | Web Designer & Developer</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<!-- NAV -->
+<nav class="nav">
+  <span class="logo">MV</span>
+
+  <button class="menu-toggle">☰</button>
+
+  <div class="nav-links">
+    <a href="#about">Sobre mí</a>
+    <a href="#services">Servicios</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#contact">Contacto</a>
+  </div>
+</nav>
+
+<!-- HERO -->
 <header class="hero">
   <h1>
-    Diseño y desarrollo sitios web profesionales<br />
-    para marcas y emprendedores.
+    Diseño y desarrollo experiencias web<br />
+    funcionales, atractivas y estratégicas.
   </h1>
-  <p>Web Designer & Developer · Freelancer</p>
 
-  <section id="services" class="services">
-    <h2>Servicios</h2>
-  
-    <div class="services-grid">
-  
-      <article class="service-card">
-        <h3>Diseño Web Profesional</h3>
-        <p>
-          Diseño de sitios web modernos, claros y funcionales enfocados en ofrecer una experiencia de usuario atractiva y alineada con la identidad de tu marca.
-        </p>
-      </article>
-  
-      <article class="service-card">
-        <h3>Desarrollo Web a Medida</h3>
-        <p>
-          Desarrollo de sitios web rápidos, optimizados y adaptables a cualquier dispositivo, construidos según las necesidades específicas de cada proyecto.
-        </p>
-      </article>
-  
-      <article class="service-card">
-        <h3>Landing Pages que Convierten</h3>
-        <p>
-          Creación de landing pages estratégicas diseñadas para captar la atención del usuario y convertir visitas en contactos o clientes.
-        </p>
-      </article>
-  
-      <article class="service-card">
-        <h3>Automatización y Herramientas Digitales</h3>
-        <p>
-          Desarrollo de herramientas digitales y automatizaciones que optimizan procesos internos y facilitan el acceso a la información.
-        </p>
-      </article>
-  
-    </div>
-  </section>
+  <p class="hero-sub">
+    Soy <strong>Marycarmen Vives</strong>, Web Designer & Developer freelancer.<br>
+    Creo sitios web que conectan diseño, usabilidad y objetivos reales.
+  </p>
 
-  <section id="projects" class="projects">
-    <h2>Proyectos destacados</h2>
-  
-    <div class="projects-grid">
-  
-      <article class="project-card">
-        <h3>Portal de Transparencia</h3>
-        <p>
-          Plataforma web interactiva para estandarizar la presentación de avances en la gestión de proyectos y facilitar el acceso a la información.
-        </p>
-        <span>HTML · CSS · JavaScript</span>
-        <a href="https://portaldetransparencia.vercel.app/" target="_blank">Ver proyecto →</a>
-      </article>
-  
-      <article class="project-card">
-        <h3>SIGEDA Capitular</h3>
-        <p>
-          Sitio web para la gestión y consulta de documentación interna, optimizando procesos y centralizando información institucional.
-        </p>
-        <span>Google Sites · UX</span>
-        <a href="https://sites.google.com/aneiap.co/sigeda-capitular-uninorte/inicio?authuser=3" target="_blank">Ver proyecto →</a>
-      </article>
-  
-      <article class="project-card">
-        <h3>EvalHVAN</h3>
-        <p>
-          Herramienta para el análisis de potencial de candidatos a cargos específicos, apoyando la toma de decisiones.
-        </p>
-        <span>Python · Streamlit</span>
-        <a href="https://evalhv-uvgdqtpnuheurqmrzdnnnb.streamlit.app/" target="_blank">Ver proyecto →</a>
-      </article>
-  
-      <article class="project-card">
-        <h3>Chat GDC</h3>
-        <p>
-          Chatbot para facilitar el acceso a la gestión documental mediante palabras clave.
-        </p>
-        <span>Google Apps Script</span>
-        <a href="https://script.google.com/a/macros/aneiap.co/s/AKfycbyvObGwLD9uvDhDWroME8V_qP80WKkM54M9LxKxlCMrl66cOKM_R23yWKkR94hHpVim/exec" target="_blank">
-          Ver proyecto →
-        </a>
-      </article>
-  
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>¿Trabajamos juntos?</h2>
-  
-    <p>
-      Si tienes una idea, proyecto o necesitas mejorar tu presencia online,
-      estaré encantada de ayudarte.
-    </p>
-  
-    <div class="contact-buttons">
-      <a
-        href="https://wa.me/57XXXXXXXXXX"
-        target="_blank"
-        class="btn primary"
-      >
-        Escríbeme por WhatsApp
-      </a>
-  
-      <a
-        href="mailto:tucorreo@gmail.com"
-        class="btn secondary"
-      >
-        Enviarme un email
-      </a>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-content">
-  
-      <p class="footer-name">
-        Marycarmen Vives · Web Designer & Developer
-      </p>
-  
-      <div class="footer-links">
-        <a href="#projects">Proyectos</a>
-        <a href="#services">Servicios</a>
-        <a href="#contact">Contacto</a>
-        <a href="https://github.com/tu-usuario" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/tu-linkedin" target="_blank">LinkedIn</a>
-      </div>
-  
-      <p class="footer-copy">
-        © 2025 · Todos los derechos reservados
-      </p>
-  
-    </div>
-  </footer>
-
+  <div class="hero-buttons">
+    <a href="#contact" class="btn primary">Contáctame</a>
+    <a href="assets/docs/CV-Marycarmen-Vives-Hurtado-ES.pdf" class="btn secondary" download>
+      Descargar CV
+    </a>
+  </div>
 </header>
 
+<!-- ABOUT -->
+<section id="about" class="about reveal">
+  <h2>Sobre mí</h2>
+
+  <div class="about-content">
+    <p>
+      Mi nombre es <strong>Marycarmen Vives Hurtado</strong>, diseñadora web y
+      desarrolladora frontend freelancer con base en Barranquilla.
+    </p>
+
+    <p>
+      Me apasiona el diseño en todas sus formas, desde la creación de piezas
+      visuales y publicidad, hasta el desarrollo de experiencias web claras,
+      funcionales y atractivas.
+    </p>
+
+    <p>
+      Creo firmemente que un buen diseño es el primer gancho para generar
+      confianza y conectar con las personas, por eso cada proyecto está pensado
+      desde la experiencia de usuario y los objetivos reales de cada marca.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services reveal">
+  <h2>Servicios</h2>
+
+  <div class="services-grid">
+    <article class="service-card reveal">
+      <h3>Diseño Web Profesional</h3>
+      <p>Diseño de sitios modernos, claros y alineados con la identidad de tu marca.</p>
+    </article>
+
+    <article class="service-card reveal">
+      <h3>Desarrollo Web a Medida</h3>
+      <p>Desarrollo de sitios rápidos, optimizados y adaptables a cualquier dispositivo.</p>
+    </article>
+
+    <article class="service-card reveal">
+      <h3>Landing Pages</h3>
+      <p>Landing pages estratégicas enfocadas en conversión y experiencia de usuario.</p>
+    </article>
+
+    <article class="service-card reveal">
+      <h3>Automatización</h3>
+      <p>Herramientas digitales que optimizan procesos y facilitan la gestión.</p>
+    </article>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects reveal">
+  <h2>Proyectos destacados</h2>
+
+  <div class="projects-grid">
+
+    <article class="project-card reveal"
+      data-title="Portal de Transparencia"
+      data-description="Plataforma web interactiva para estandarizar la presentación de avances en la gestión de proyectos."
+      data-tech="HTML · CSS · JavaScript"
+      data-link="https://portaldetransparencia.vercel.app/">
+      <h3>Portal de Transparencia</h3>
+      <p>Plataforma web para la gestión de proyectos.</p>
+      <span>HTML · CSS · JS</span>
+      <button class="project-btn">Ver detalles →</button>
+    </article>
+
+    <article class="project-card reveal"
+      data-title="SIGEDA Capitular"
+      data-description="Canal web para la gestión y consulta de documentación interna institucional."
+      data-tech="Google Sites · UX"
+      data-link="https://sites.google.com/aneiap.co/sigeda-capitular-uninorte/inicio?authuser=3">
+      <h3>SIGEDA Capitular</h3>
+      <p>Gestión documental institucional.</p>
+      <span>Google Sites · UX</span>
+      <button class="project-btn">Ver detalles →</button>
+    </article>
+
+    <article class="project-card reveal"
+      data-title="EvalHVAN"
+      data-description="Herramienta para analizar el potencial de candidatos a cargos específicos."
+      data-tech="Python · Streamlit"
+      data-link="https://evalhv-uvgdqtpnuheurqmrzdnnnb.streamlit.app/">
+      <h3>EvalHVAN</h3>
+      <p>Análisis de perfiles.</p>
+      <span>Python · Streamlit</span>
+      <button class="project-btn">Ver detalles →</button>
+    </article>
+
+    <article class="project-card reveal"
+      data-title="Chat GDC"
+      data-description="Chatbot para facilitar el acceso a la gestión documental mediante palabras clave."
+      data-tech="Google Apps Script"
+      data-link="https://script.google.com/a/macros/aneiap.co/s/AKfycbyvObGwLD9uvDhDWroME8V_qP80WKkM54M9LxKxlCMrl66cOKM_R23yWKkR94hHpVim/exec">
+      <h3>Chat GDC</h3>
+      <p>Chatbot documental.</p>
+      <span>Apps Script</span>
+      <button class="project-btn">Ver detalles →</button>
+    </article>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact reveal">
+  <h2>¿Trabajamos juntos?</h2>
+  <p>Si tienes una idea o proyecto, estaré encantada de ayudarte.</p>
+
+  <div class="contact-buttons">
+    <a href="mailto:marycarmenvihur@gmail.com" class="btn primary">Enviar email</a>
+    <a href="https://www.linkedin.com/in/marycarmen-vives-hurtado/" target="_blank" class="btn secondary">LinkedIn</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 · Marycarmen Vives</p>
+  <div class="footer-links">
+    <a href="https://github.com/maryvh08" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/marycarmen-vives-hurtado/" target="_blank">LinkedIn</a>
+    <a href="mailto:marycarmenvihur@gmail.com">Email</a>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="projectModal">
+  <div class="modal-content">
+    <button class="close-modal">✕</button>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+    <p id="modalTech"></p>
+    <a id="modalLink" target="_blank" class="btn primary">Ver proyecto</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
