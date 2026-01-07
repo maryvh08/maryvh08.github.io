@@ -335,3 +335,44 @@ h1, h2, h3, p {
   opacity: 1;
   transform: translateY(0);
 }
+
+.project-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(12,12,14,0.4),
+    rgba(12,12,14,0.9)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  border-radius: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-tech {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tech {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  background: rgba(124,140,255,0.12);
+  color: var(--accent);
+}
