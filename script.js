@@ -45,3 +45,29 @@ modal.addEventListener('click', e => {
     document.body.style.overflow = '';
   }
 });
+// ===== CONTACT DRAWER =====
+const openDrawerBtn = document.querySelector('.open-drawer');
+const contactDrawer = document.getElementById('contactDrawer');
+const closeDrawerBtn = document.querySelector('.close-drawer');
+
+if (openDrawerBtn) {
+  openDrawerBtn.addEventListener('click', () => {
+    contactDrawer.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+}
+
+if (closeDrawerBtn) {
+  closeDrawerBtn.addEventListener('click', () => {
+    contactDrawer.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+}
+
+contactDrawer.addEventListener('click', e => {
+  if (e.target === contactDrawer) {
+    contactDrawer.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+});
+
