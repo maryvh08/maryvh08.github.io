@@ -1,4 +1,3 @@
-// ===== REVEAL ANIMATIONS =====
 const reveals = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver(entries => {
@@ -12,7 +11,6 @@ const observer = new IntersectionObserver(entries => {
 
 reveals.forEach(el => observer.observe(el));
 
-// ===== PROJECT MODAL =====
 const modal = document.getElementById('projectModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalDescription = document.getElementById('modalDescription');
@@ -31,15 +29,18 @@ document.querySelectorAll('.project-card').forEach(card => {
     modalLink.href = card.dataset.link || '#';
 
     modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
   });
 });
 
 closeModal.addEventListener('click', () => {
   modal.classList.remove('active');
+  document.body.style.overflow = '';
 });
 
 modal.addEventListener('click', e => {
   if (e.target === modal) {
     modal.classList.remove('active');
+    document.body.style.overflow = '';
   }
 });
