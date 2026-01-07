@@ -261,3 +261,27 @@ h1, h2, h3, p {
   transform: translateY(-3px);
   opacity: 1;
 }
+
+/* ===== PROJECT CARD CLICKABLE ===== */
+.project-card {
+  cursor: pointer;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Elimina cualquier botón viejo */
+.project-btn {
+  display: none;
+}
