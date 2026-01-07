@@ -4,11 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <title>Marycarmen Vives | Diseñadora Web & Frontend Developer Freelance</title>
 
-  <meta property="og:image" content="https://maryvh08.github.io/assets/og-image.png">
-
+  <!-- SEO -->
   <meta name="description" content="Portafolio de Marycarmen Vives, diseñadora web y frontend developer freelance. Diseño y desarrollo de sitios web modernos y funcionales para marcas y emprendedores.">
   <meta name="keywords" content="diseño web, frontend developer, diseñadora web freelance, desarrollo web, portafolio web">
 
@@ -17,20 +15,26 @@
   <meta property="og:description" content="Diseño y desarrollo de sitios web modernos y funcionales para marcas y emprendedores.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://maryvh08.github.io/">
+  <meta property="og:image" content="https://maryvh08.github.io/assets/og-image.png">
 
   <!-- Identity -->
   <link rel="me" href="https://www.linkedin.com/in/marycarmen-vives-hurtado/">
 
-  <!-- Styles & Fonts -->
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <span class="logo">MV</span>
   <button class="menu-toggle" aria-label="Abrir menú">☰</button>
@@ -43,12 +47,8 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <header class="hero">
-  <h1>
-    Diseño y desarrollo web profesional<br />
-    para marcas y emprendedores.
-  </h1>
+  <h1>Diseño y desarrollo web profesional<br>para marcas y emprendedores.</h1>
 
   <p class="hero-sub">
     Soy <strong>Marycarmen Vives</strong>, Web Designer & Developer freelancer.<br>
@@ -63,57 +63,25 @@
   </div>
 </header>
 
-<!-- ABOUT -->
 <section id="about" class="about reveal">
   <h2>Sobre mí</h2>
-
   <div class="about-content">
-    <p>
-      Mi nombre es <strong>Marycarmen Vives Hurtado</strong>, diseñadora web y
-      desarrolladora frontend freelance con base en Barranquilla.
-    </p>
-
-    <p>
-      Me apasiona el diseño en todas sus formas, desde la creación de piezas
-      visuales y publicidad, hasta el desarrollo de experiencias web claras,
-      funcionales y atractivas.
-    </p>
-
-    <p>
-      Creo firmemente que un buen diseño es el primer gancho para generar
-      confianza y conectar con las personas.
-    </p>
+    <p><strong>Marycarmen Vives Hurtado</strong>, diseñadora web y frontend freelance con base en Barranquilla.</p>
+    <p>Apasionada por el diseño visual y el desarrollo de experiencias web claras, funcionales y atractivas.</p>
+    <p>Creo firmemente que un buen diseño es el primer gancho para generar confianza.</p>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="services reveal">
   <h2>Servicios</h2>
-
   <div class="services-grid">
-    <article class="service-card reveal">
-      <h3>Diseño Web Profesional</h3>
-      <p>Diseño de sitios modernos y alineados con tu identidad de marca.</p>
-    </article>
-
-    <article class="service-card reveal">
-      <h3>Desarrollo Web a Medida</h3>
-      <p>Sitios rápidos, optimizados y adaptables a cualquier dispositivo.</p>
-    </article>
-
-    <article class="service-card reveal">
-      <h3>Landing Pages</h3>
-      <p>Landing pages enfocadas en conversión y experiencia de usuario.</p>
-    </article>
-
-    <article class="service-card reveal">
-      <h3>Automatización</h3>
-      <p>Herramientas digitales que optimizan procesos internos.</p>
-    </article>
+    <article class="service-card reveal"><h3>Diseño Web</h3><p>Diseño moderno alineado con tu marca.</p></article>
+    <article class="service-card reveal"><h3>Desarrollo Web</h3><p>Sitios rápidos y optimizados.</p></article>
+    <article class="service-card reveal"><h3>Landing Pages</h3><p>Enfocadas en conversión.</p></article>
+    <article class="service-card reveal"><h3>Automatización</h3><p>Optimización de procesos.</p></article>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="projects reveal">
   <h2>Proyectos destacados</h2>
 
@@ -121,105 +89,60 @@
 
     <article class="project-card reveal"
       data-title="Portal de Transparencia"
-      data-description="Plataforma web interactiva para estandarizar la presentación de avances en la gestión de proyectos."
+      data-description="Plataforma web interactiva para estandarizar la presentación de avances."
       data-tech="HTML · CSS · JavaScript"
       data-link="https://portaldetransparencia.vercel.app/">
 
       <h3>Portal de Transparencia</h3>
-      <p>Plataforma web para la gestión de proyectos.</p>
+      <p>Gestión de proyectos.</p>
 
       <div class="project-tech">
-        <img src="assets/logos/html.svg" alt="HTML">
-        <img src="assets/logos/css.svg" alt="CSS">
-        <img src="assets/logos/js.svg" alt="JavaScript">
+        <img src="assets/logos/html.svg" alt="HTML" loading="lazy">
+        <img src="assets/logos/css.svg" alt="CSS" loading="lazy">
+        <img src="assets/logos/js.svg" alt="JavaScript" loading="lazy">
       </div>
 
-      <button class="project-btn">Ver detalles →</button>
-    </article>
-
-    <article class="project-card reveal"
-      data-title="SIGEDA Capitular"
-      data-description="Canal web para la gestión documental institucional."
-      data-tech="Google Sites · UX"
-      data-link="https://sites.google.com/aneiap.co/sigeda-capitular-uninorte/inicio?authuser=3">
-
-      <h3>SIGEDA Capitular</h3>
-      <p>Gestión documental institucional.</p>
-
-      <div class="project-tech">
-        <img src="assets/logos/google.svg" alt="Google">
-      </div>
-
-      <button class="project-btn">Ver detalles →</button>
-    </article>
-
-    <article class="project-card reveal"
-      data-title="EvalHVAN"
-      data-description="Herramienta para analizar el potencial de candidatos."
-      data-tech="Python · Streamlit"
-      data-link="https://evalhv-uvgdqtpnuheurqmrzdnnnb.streamlit.app/">
-
-      <h3>EvalHVAN</h3>
-      <p>Análisis de perfiles.</p>
-
-      <div class="project-tech">
-        <img src="assets/logos/python.svg" alt="Python">
-        <img src="assets/logos/streamlit.svg" alt="Streamlit">
-      </div>
-
-      <button class="project-btn">Ver detalles →</button>
-    </article>
-
-    <article class="project-card reveal"
-      data-title="Chat GDC"
-      data-description="Chatbot para facilitar el acceso a la gestión documental."
-      data-tech="Google Apps Script"
-      data-link="https://script.google.com/a/macros/aneiap.co/s/AKfycbyvObGwLD9uvDhDWroME8V_qP80WKkM54M9LxKxlCMrl66cOKM_R23yWKkR94hHpVim/exec">
-
-      <h3>Chat GDC</h3>
-      <p>Chatbot documental.</p>
-
-      <div class="project-tech">
-        <img src="assets/logos/google.svg" alt="Google">
-      </div>
-
-      <button class="project-btn">Ver detalles →</button>
+      <button class="project-btn" aria-label="Ver detalles del proyecto Portal de Transparencia">
+        Ver detalles →
+      </button>
     </article>
 
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact reveal">
   <h2>¿Trabajamos juntos?</h2>
   <p>Si tienes una idea o proyecto, estaré encantada de ayudarte.</p>
 
   <div class="contact-buttons">
     <a href="mailto:marycarmenvihur@gmail.com" class="btn primary">Enviar email</a>
-    <a href="https://www.linkedin.com/in/marycarmen-vives-hurtado/" target="_blank" class="btn secondary">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/marycarmen-vives-hurtado/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn secondary">LinkedIn</a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <p>© 2025 · Marycarmen Vives</p>
   <div class="footer-links">
-    <a href="https://github.com/maryvh08" target="_blank">GitHub</a>
+    <a href="https://github.com/maryvh08" target="_blank" rel="noopener noreferrer">GitHub</a>
     <a href="mailto:marycarmenvihur@gmail.com">Email</a>
   </div>
 </footer>
 
-<!-- MODAL -->
 <div class="modal" id="projectModal">
   <div class="modal-content">
-    <button class="close-modal">✕</button>
+    <button class="close-modal" aria-label="Cerrar modal">✕</button>
     <h3 id="modalTitle"></h3>
     <p id="modalDescription"></p>
     <p id="modalTech"></p>
-    <a id="modalLink" target="_blank" class="btn primary">Ver proyecto</a>
+    <a id="modalLink" target="_blank" rel="noopener noreferrer" class="btn primary">
+      Ver proyecto
+    </a>
   </div>
 </div>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
