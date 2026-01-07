@@ -250,3 +250,14 @@ h1, h2, h3, p {
   line-height: 1.2;
 }
 
+.project-tech svg {
+  width: 24px;
+  height: 24px;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project-card:hover svg {
+  transform: translateY(-3px);
+  opacity: 1;
+}
