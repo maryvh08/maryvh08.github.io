@@ -1,0 +1,16 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+section {
+  padding: 4rem 2rem;
+}
+
+.project-card {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
