@@ -413,3 +413,51 @@ h1, h2, h3, p {
   outline: none;
   border-color: var(--accent);
 }
+
+/* ===== CONTACT DRAWER ===== */
+.contact-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+.contact-drawer.active {
+  display: flex;
+}
+
+.drawer-content {
+  background: #111;
+  width: 100%;
+  max-height: 90vh;
+  border-radius: 24px 24px 0 0;
+  padding: 2rem 1.5rem;
+  animation: slideUp 0.4s ease forwards;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.close-drawer {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  cursor: pointer;
+}
+
+/* Desktop: drawer desactivado */
+@media (min-width: 768px) {
+  .contact-drawer {
+    display: none !important;
+  }
+}
