@@ -461,3 +461,51 @@ h1, h2, h3, p {
     display: none !important;
   }
 }
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Botón con icono */
+.icon-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+
+  background: #111;
+  color: #fff;
+  border: 1px solid #2a2a2a;
+
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+/* Icono */
+.icon-btn img {
+  width: 18px;
+  height: 18px;
+  filter: invert(1);
+}
+
+/* Hover elegante */
+.icon-btn:hover {
+  background: #fff;
+  color: #111;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-btn:hover img {
+  filter: invert(0);
+}
