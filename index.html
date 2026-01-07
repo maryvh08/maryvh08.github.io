@@ -3,21 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Marycarmen Vives | Diseñadora Web & Frontend Developer Freelance</title>
+
+  <meta name="description" content="Portafolio de Marycarmen Vives, diseñadora web y frontend developer freelance. Diseño y desarrollo de sitios web modernos y funcionales para marcas y emprendedores.">
+  <meta name="keywords" content="diseño web, frontend developer, diseñadora web freelance, desarrollo web, portafolio web">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Marycarmen Vives | Diseñadora Web Freelance">
   <meta property="og:description" content="Diseño y desarrollo de sitios web modernos y funcionales para marcas y emprendedores.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://github.com/maryvh08.github.io/">
+  <meta property="og:url" content="https://maryvh08.github.io/">
 
+  <!-- Identity -->
+  <link rel="me" href="https://www.linkedin.com/in/marycarmen-vives-hurtado/">
+
+  <!-- Styles & Fonts -->
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <!-- NAV -->
 <nav class="nav">
   <span class="logo">MV</span>
-
-  <button class="menu-toggle">☰</button>
+  <button class="menu-toggle" aria-label="Abrir menú">☰</button>
 
   <div class="nav-links">
     <a href="#about">Sobre mí</a>
@@ -41,7 +54,7 @@
 
   <div class="hero-buttons">
     <a href="#contact" class="btn primary">Contáctame</a>
-    <a href="CV Marycarmen Vives Hurtado ES.pdf" class="btn secondary" download>
+    <a href="assets/docs/CV-Marycarmen-Vives-Hurtado-ES.pdf" class="btn secondary" download>
       Descargar CV
     </a>
   </div>
@@ -54,7 +67,7 @@
   <div class="about-content">
     <p>
       Mi nombre es <strong>Marycarmen Vives Hurtado</strong>, diseñadora web y
-      desarrolladora frontend freelancer con base en Barranquilla.
+      desarrolladora frontend freelance con base en Barranquilla.
     </p>
 
     <p>
@@ -65,13 +78,10 @@
 
     <p>
       Creo firmemente que un buen diseño es el primer gancho para generar
-      confianza y conectar con las personas, por eso cada proyecto está pensado
-      desde la experiencia de usuario y los objetivos reales de cada marca.
+      confianza y conectar con las personas.
     </p>
   </div>
 </section>
-
-<meta name="keywords" content="diseño web, frontend developer, diseñadora web freelance, desarrollo web, portafolio web">
 
 <!-- SERVICES -->
 <section id="services" class="services reveal">
@@ -80,22 +90,22 @@
   <div class="services-grid">
     <article class="service-card reveal">
       <h3>Diseño Web Profesional</h3>
-      <p>Diseño de sitios modernos, claros y alineados con la identidad de tu marca.</p>
+      <p>Diseño de sitios modernos y alineados con tu identidad de marca.</p>
     </article>
 
     <article class="service-card reveal">
       <h3>Desarrollo Web a Medida</h3>
-      <p>Desarrollo de sitios rápidos, optimizados y adaptables a cualquier dispositivo.</p>
+      <p>Sitios rápidos, optimizados y adaptables a cualquier dispositivo.</p>
     </article>
 
     <article class="service-card reveal">
       <h3>Landing Pages</h3>
-      <p>Landing pages estratégicas enfocadas en conversión y experiencia de usuario.</p>
+      <p>Landing pages enfocadas en conversión y experiencia de usuario.</p>
     </article>
 
     <article class="service-card reveal">
       <h3>Automatización</h3>
-      <p>Herramientas digitales que optimizan procesos y facilitan la gestión.</p>
+      <p>Herramientas digitales que optimizan procesos internos.</p>
     </article>
   </div>
 </section>
@@ -111,57 +121,65 @@
       data-description="Plataforma web interactiva para estandarizar la presentación de avances en la gestión de proyectos."
       data-tech="HTML · CSS · JavaScript"
       data-link="https://portaldetransparencia.vercel.app/">
-    
+
       <h3>Portal de Transparencia</h3>
       <p>Plataforma web para la gestión de proyectos.</p>
-    
+
       <div class="project-tech">
         <img src="assets/logos/html.svg" alt="HTML">
         <img src="assets/logos/css.svg" alt="CSS">
         <img src="assets/logos/js.svg" alt="JavaScript">
       </div>
-    
+
       <button class="project-btn">Ver detalles →</button>
     </article>
 
-
     <article class="project-card reveal"
       data-title="SIGEDA Capitular"
-      data-description="Canal web para la gestión y consulta de documentación interna institucional."
+      data-description="Canal web para la gestión documental institucional."
       data-tech="Google Sites · UX"
       data-link="https://sites.google.com/aneiap.co/sigeda-capitular-uninorte/inicio?authuser=3">
+
       <h3>SIGEDA Capitular</h3>
       <p>Gestión documental institucional.</p>
-      <span>Google Sites · UX</span>
+
+      <div class="project-tech">
+        <img src="assets/logos/google.svg" alt="Google">
+      </div>
+
       <button class="project-btn">Ver detalles →</button>
     </article>
 
     <article class="project-card reveal"
       data-title="EvalHVAN"
-      data-description="Herramienta para analizar el potencial de candidatos a cargos específicos."
+      data-description="Herramienta para analizar el potencial de candidatos."
       data-tech="Python · Streamlit"
       data-link="https://evalhv-uvgdqtpnuheurqmrzdnnnb.streamlit.app/">
+
       <h3>EvalHVAN</h3>
       <p>Análisis de perfiles.</p>
-      <span>Python · Streamlit</span>
+
       <div class="project-tech">
         <img src="assets/logos/python.svg" alt="Python">
         <img src="assets/logos/streamlit.svg" alt="Streamlit">
       </div>
+
       <button class="project-btn">Ver detalles →</button>
     </article>
 
     <article class="project-card reveal"
       data-title="Chat GDC"
-      data-description="Chatbot para facilitar el acceso a la gestión documental mediante palabras clave."
+      data-description="Chatbot para facilitar el acceso a la gestión documental."
       data-tech="Google Apps Script"
       data-link="https://script.google.com/a/macros/aneiap.co/s/AKfycbyvObGwLD9uvDhDWroME8V_qP80WKkM54M9LxKxlCMrl66cOKM_R23yWKkR94hHpVim/exec">
+
       <h3>Chat GDC</h3>
       <p>Chatbot documental.</p>
-      <span>Apps Script</span>
+
       <div class="project-tech">
         <img src="assets/logos/google.svg" alt="Google">
       </div>
+
       <button class="project-btn">Ver detalles →</button>
     </article>
 
@@ -184,7 +202,6 @@
   <p>© 2025 · Marycarmen Vives</p>
   <div class="footer-links">
     <a href="https://github.com/maryvh08" target="_blank">GitHub</a>
-    <link rel="me" href="https://www.linkedin.com/in/marycarmen-vives-hurtado/">
     <a href="mailto:marycarmenvihur@gmail.com">Email</a>
   </div>
 </footer>
