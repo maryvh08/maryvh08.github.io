@@ -22,12 +22,13 @@ const closeModal = document.querySelector('.close-modal');
 
 document.querySelectorAll('.project-card').forEach(card => {
   const btn = card.querySelector('.project-btn');
+  if (!btn) return;
 
   btn.addEventListener('click', () => {
-    modalTitle.textContent = card.dataset.title;
-    modalDescription.textContent = card.dataset.description;
-    modalTech.textContent = card.dataset.tech;
-    modalLink.href = card.dataset.link;
+    modalTitle.textContent = card.dataset.title || '';
+    modalDescription.textContent = card.dataset.description || '';
+    modalTech.textContent = card.dataset.tech || '';
+    modalLink.href = card.dataset.link || '#';
 
     modal.classList.add('active');
   });
@@ -37,7 +38,6 @@ closeModal.addEventListener('click', () => {
   modal.classList.remove('active');
 });
 
-// Cerrar al hacer clic fuera
 modal.addEventListener('click', e => {
   if (e.target === modal) {
     modal.classList.remove('active');
