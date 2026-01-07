@@ -19,3 +19,21 @@ projects.forEach(p => {
   `;
   container.appendChild(div);
 });
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+emailjs.init("TU_PUBLIC_KEY");
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_id",
+    "template_id",
+    this
+  ).then(() => {
+    alert("Mensaje enviado correctamente");
+  });
+});
+
