@@ -1,3 +1,6 @@
+/* ======================================================
+   VARIABLES
+====================================================== */
 :root {
   --bg-main: #0b0b0d;
   --bg-card: #141418;
@@ -10,27 +13,35 @@
   --space-lg: 4rem;
 }
 
-* {
+/* ======================================================
+   RESET & BASE
+====================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg-main);
   color: var(--text-main);
+  line-height: 1.6;
 }
 
-/* NAV */
+/* ======================================================
+   NAV
+====================================================== */
 .nav {
   position: fixed;
-  top: 0;
-  width: 100%;
+  inset: 0 0 auto 0;
   padding: 1rem 2rem;
-  background: rgba(15,15,15,0.9);
+  background: rgba(15, 15, 15, 0.9);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   z-index: 1000;
 }
 
@@ -40,7 +51,9 @@ body {
   text-decoration: none;
 }
 
-/* HERO */
+/* ======================================================
+   HERO
+====================================================== */
 .hero {
   padding: 8rem 2rem 6rem;
   max-width: 900px;
@@ -49,6 +62,7 @@ body {
 
 .hero h1 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.2;
 }
 
 .hero-sub {
@@ -62,12 +76,15 @@ body {
   gap: 1rem;
 }
 
-/* BUTTONS */
+/* ======================================================
+   BUTTONS
+====================================================== */
 .btn {
   padding: 0.8rem 1.5rem;
-  border-radius: 30px;
+  border-radius: 999px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.25s ease;
+  font-weight: 500;
 }
 
 .btn.primary {
@@ -80,7 +97,9 @@ body {
   color: var(--accent);
 }
 
-/* SECTIONS */
+/* ======================================================
+   SECTIONS
+====================================================== */
 section {
   padding: var(--space-lg) 2rem;
   max-width: 1000px;
@@ -91,20 +110,32 @@ h2 {
   margin-bottom: 2rem;
 }
 
-/* CARDS */
+h1, h2, h3, p {
+  margin: 0;
+}
+
+/* ======================================================
+   GRIDS
+====================================================== */
 .services-grid,
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
 }
 
+/* ======================================================
+   CARDS
+====================================================== */
 .service-card,
 .project-card {
   background: var(--bg-card);
   padding: 1.5rem;
   border-radius: 16px;
-  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.3s ease;
 }
 
 .service-card:hover,
@@ -112,25 +143,82 @@ h2 {
   transform: translateY(-6px);
 }
 
-/* CONTACT */
-.contact-buttons {
+/* ======================================================
+   PROJECT CARD
+====================================================== */
+.project-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Tech icons */
+.project-tech {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.6rem;
 }
 
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 2rem;
-  border-top: 1px solid #222;
+.project-tech img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* ===== MODAL FIX DEFINITIVO ===== */
-/* ===== DRAWER MODAL ===== */
+.project-card:hover .project-tech img {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+/* Hover overlay */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(
+    to bottom,
+    rgba(12, 12, 14, 0.4),
+    rgba(12, 12, 14, 0.95)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-overlay,
+.project-card:focus-visible .project-overlay {
+  opacity: 1;
+}
+
+/* Eliminar botones antiguos */
+.project-btn {
+  display: none;
+}
+
+/* ======================================================
+   MODAL (PROJECT)
+====================================================== */
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: none;
   justify-content: flex-end;
   z-index: 999;
@@ -150,31 +238,12 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transform: translateX(100%);
   animation: slideIn 0.4s forwards;
 }
 
 @keyframes slideIn {
+  from { transform: translateX(100%); }
   to { transform: translateX(0); }
-}
-
-.modal.active {
-  display: flex;
-}
-
-.modal-content {
-  background: #111;
-  color: #fff;
-  max-width: 520px;
-  width: 100%;
-  max-height: 85vh;
-  padding: 2rem;
-  border-radius: 16px;
-  overflow-y: auto;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 .close-modal {
@@ -186,198 +255,53 @@ h2 {
   cursor: pointer;
 }
 
-/* ANIMATIONS */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.8s;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero-buttons,
-  .contact-buttons {
-    flex-direction: column;
-  }
-}
-
-.project-tech {
+/* ======================================================
+   CONTACT
+====================================================== */
+.contact-buttons {
   display: flex;
-  gap: 0.6rem;
-  margin: 0.8rem 0 1rem;
-}
-
-.project-tech svg {
-  width: 22px;
-  height: 22px;
-  opacity: 0.8;
-  transition: 0.3s ease;
-}
-
-.project-card:hover svg {
-  opacity: 1;
-  transform: translateY(-2px);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-}
-
-section {
-  padding: 4rem 1.5rem;
-}
-
-.hero,
-.about,
-.services,
-.projects,
-.contact {
-  position: relative;
-  overflow: hidden;
-}
-
-.services-grid,
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-}
-
-.project-card,
-.service-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-h1, h2, h3, p {
-  margin: 0;
-}
-
-.hero h1 {
-  line-height: 1.2;
-}
-
-.project-tech svg {
-  width: 24px;
-  height: 24px;
-  opacity: 0.8;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.project-card:hover svg {
-  transform: translateY(-3px);
-  opacity: 1;
-}
-
-/* ===== PROJECT CARD CLICKABLE ===== */
-.project-card {
-  cursor: pointer;
-}
-
-.project-card:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
-}
-
-.project-card h3 {
-  font-size: 1.2rem;
-}
-
-.project-card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-/* Elimina cualquier botón viejo */
-.project-btn {
-  display: none;
-}
-
-/* ===== PROJECT HOVER OVERLAY ===== */
-.project-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.project-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(11,11,13,0.3),
-    rgba(11,11,13,0.95)
-  );
-  display: flex;
-  align-items: center;
   justify-content: center;
-  font-weight: 600;
-  color: var(--accent);
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.35s ease;
-  pointer-events: none;
-}
-
-.project-card:hover .project-overlay,
-.project-card:focus-visible .project-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.project-card {
-  position: relative;
-  cursor: pointer;
-}
-
-.project-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(12,12,14,0.4),
-    rgba(12,12,14,0.9)
-  );
-  display: flex;
   align-items: center;
-  justify-content: center;
-  opacity: 0;
-  border-radius: 16px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-
-.project-tech {
-  display: flex;
-  gap: 0.5rem;
+  gap: 1.25rem;
+  margin-top: 2rem;
   flex-wrap: wrap;
 }
 
-.tech {
-  font-size: 0.75rem;
-  padding: 0.3rem 0.6rem;
-  border-radius: 12px;
-  background: rgba(124,140,255,0.12);
-  color: var(--accent);
+/* Icon button */
+.icon-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #2a2a2a;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
 }
 
-/* ===== CONTACT FORM ===== */
+.icon-btn img {
+  width: 18px;
+  height: 18px;
+  filter: invert(1);
+}
+
+.icon-btn:hover {
+  background: #fff;
+  color: #111;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-btn:hover img {
+  filter: invert(0);
+}
+
+/* ======================================================
+   CONTACT FORM
+====================================================== */
 .contact-form {
   margin-top: 2.5rem;
   max-width: 520px;
@@ -405,7 +329,6 @@ h1, h2, h3, p {
   padding: 0.8rem 1rem;
   color: var(--text-main);
   font-family: inherit;
-  resize: none;
 }
 
 .contact-form input:focus,
@@ -414,98 +337,35 @@ h1, h2, h3, p {
   border-color: var(--accent);
 }
 
-/* ===== CONTACT DRAWER ===== */
-.contact-drawer {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  justify-content: center;
-  align-items: flex-end;
-  z-index: 1000;
+/* ======================================================
+   FOOTER
+====================================================== */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #222;
 }
 
-.contact-drawer.active {
-  display: flex;
+/* ======================================================
+   ANIMATIONS
+====================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
 }
 
-.drawer-content {
-  background: #111;
-  width: 100%;
-  max-height: 90vh;
-  border-radius: 24px 24px 0 0;
-  padding: 2rem 1.5rem;
-  animation: slideUp 0.4s ease forwards;
-  overflow-y: auto;
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@keyframes slideUp {
-  from { transform: translateY(100%); }
-  to { transform: translateY(0); }
-}
-
-.close-drawer {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.4rem;
-  position: absolute;
-  top: 1rem;
-  right: 1.2rem;
-  cursor: pointer;
-}
-
-/* Desktop: drawer desactivado */
-@media (min-width: 768px) {
-  .contact-drawer {
-    display: none !important;
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+@media (max-width: 768px) {
+  .hero-buttons,
+  .contact-buttons {
+    flex-direction: column;
   }
-}
-
-.contact-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.25rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-
-/* Botón con icono */
-.icon-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-
-  padding: 0.75rem 1.2rem;
-  border-radius: 999px;
-
-  background: #111;
-  color: #fff;
-  border: 1px solid #2a2a2a;
-
-  font-weight: 500;
-  font-size: 0.95rem;
-  text-decoration: none;
-
-  transition: all 0.25s ease;
-}
-
-/* Icono */
-.icon-btn img {
-  width: 18px;
-  height: 18px;
-  filter: invert(1);
-}
-
-/* Hover elegante */
-.icon-btn:hover {
-  background: #fff;
-  color: #111;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.icon-btn:hover img {
-  filter: invert(0);
 }
