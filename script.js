@@ -1,5 +1,4 @@
-const reveals = document.querySelectorAll('.reveal');
-
+// ===== REVEAL =====
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -9,8 +8,9 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 
-reveals.forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+// ===== MODAL / DRAWER =====
 const modal = document.getElementById('projectModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalDescription = document.getElementById('modalDescription');
@@ -29,7 +29,6 @@ document.querySelectorAll('.project-card').forEach(card => {
     document.body.style.overflow = 'hidden';
   });
 
-  // Accesibilidad: Enter también abre
   card.addEventListener('keydown', e => {
     if (e.key === 'Enter') card.click();
   });
