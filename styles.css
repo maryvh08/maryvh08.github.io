@@ -25,3 +25,59 @@ section {
   margin-bottom: 1rem;
   border-radius: 8px;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  color: #b3b3b3;
+  margin-top: 1rem;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.primary {
+  background: #7c7cff;
+  color: #000;
+}
+
+.secondary {
+  border: 1px solid #7c7cff;
+  color: #7c7cff;
+}
+
