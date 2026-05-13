@@ -40,10 +40,10 @@
 
   <div class="nav-right">
     <div class="nav-links">
-      <a href="#about" data-i18n="navAbout">Sobre mí</a>
-      <a href="#services" data-i18n="navServices">Servicios</a>
-      <a href="#projects" data-i18n="navProjects">Proyectos</a>
-      <a href="#contact" data-i18n="navContact">Contacto</a>
+      <a href="#about" data-i18n="nav.about"></a>
+      <a href="#services" data-i18n="nav.services"></a>
+      <a href="#projects" data-i18n="nav.projects"></a>
+      <a href="#contact" data-i18n="nav.contact"></a>
     </div>
 
     <!-- Language Switch -->
@@ -58,42 +58,36 @@
 </nav>
 
 <header class="hero">
-  <h1>
-    Mi nombre es Marycarmen Vives Hurtado y me encanta diseñar
-  </h1>
+  <h1 data-i18n="Mi nombre es Marycarmen Vives Hurtado y me encanta diseñar"></h1>
 
-  <p class="hero-sub">
-    Soy <strong>Web Designer & Developer freelance</strong>
-    Creo sitios web que conectan diseño, usabilidad y objetivos reales.
-  </p>
+  <p data-i18n="Soy <strong>Web Designer & Developer freelance</strong>
+    Creo sitios web que conectan diseño, usabilidad y objetivos reales."></p>
 
   <div class="hero-buttons">
-    <a href="#contact" class="btn primary">Contáctame</a>
-    <a href="CV Marycarmen Vives Hurtado ES.pdf" class="btn secondary" download>
-      Descargar CV
-    </a>
+    <a href="#contact" class="btn primary" data-i18n="Contáctame"></a>
+    <a href="CV Marycarmen Vives Hurtado ES.pdf" class="btn secondary" download data-i18n="Descargar CV"></a>
   </div>
 </header>
 
 <section id="about" class="about reveal">
-  <h2>Sobre mí</h2>
-  <p>Vengo de Barranquilla, me apasiona el diseño en todas sus formas, desde la creación de piezas multimedia, publicidad, hasta llegar al desarrollo de páginas web.
-  Soy fiel creyente que un buen diseño es el primer gancho que puede atraer a que más personas puedan interesarse por un producto.</p>
+  <h2 data-i18n="Sobre mí"></h2>
+  <p data-i18n="Vengo de Barranquilla, me apasiona el diseño en todas sus formas, desde la creación de piezas multimedia, publicidad, hasta llegar al desarrollo de páginas web.
+  Soy fiel creyente que un buen diseño es el primer gancho que puede atraer a que más personas puedan interesarse por un producto."></p>
 </section>
 
 <section id="services" class="services reveal">
   <h2>Servicios</h2>
 
   <div class="services-grid">
-    <article class="service-card">Diseño Web Profesional</article>
-    <article class="service-card">Desarrollo Web a Medida</article>
-    <article class="service-card">Landing Pages</article>
-    <article class="service-card">Automatización</article>
+    <h2 data-i18n="Diseño Web Profesional"></h2>
+    <h2 data-i18n="Desarrollo Web a Medida"></h2>
+    <h2 data-i18n="Landing Pages"></h2>
+    <h2 data-i18n="Automatización"></h2>
   </div>
 </section>
 
 <section id="projects" class="projects reveal">
-  <h2>Proyectos destacados</h2>
+  <h2 data-i18n="projects.title"></h2>
 
   <div class="projects-grid">
 
@@ -201,9 +195,10 @@
   </div>
 </section>
 
+
 <section id="contact" class="contact reveal">
-  <h2>¿Trabajamos juntos?</h2>
-  <p>Si tienes una idea o proyecto, estaré encantada de ayudarte.</p>
+  <h2 data-i18n="contact.title"></h2>
+  <p data-i18n="contact.text"></p>
 
   <form
     class="contact-form"
@@ -211,7 +206,7 @@
     method="POST"
   >
     <div class="form-group">
-      <label for="name">Nombre</label>
+      <label for="name" data-i18n="form.name">Nombre</label>
       <input
         type="text"
         id="name"
@@ -220,9 +215,9 @@
         required
       >
     </div>
-  
+
     <div class="form-group">
-      <label for="email">Correo electrónico</label>
+      <label for="email" data-i18n="form.email">Correo electrónico</label>
       <input
         type="email"
         id="email"
@@ -231,9 +226,9 @@
         required
       >
     </div>
-  
+
     <div class="form-group">
-      <label for="message">Mensaje</label>
+      <label for="message" data-i18n="form.message">Mensaje</label>
       <textarea
         id="message"
         name="message"
@@ -242,8 +237,8 @@
         required
       ></textarea>
     </div>
-  
-    <button class="btn primary open-drawer">
+
+    <button class="btn primary open-drawer" data-i18n="contact.cta">
       Enviar mensaje
     </button>
   </form>
