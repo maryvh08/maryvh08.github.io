@@ -6,20 +6,30 @@
 
   <title>Marycarmen Vives | Diseñadora Web & Frontend Developer Freelance</title>
 
+  <!-- SEO -->
   <meta name="description" content="Portafolio de Marycarmen Vives, diseñadora web y frontend developer freelance.">
+  <meta name="keywords" content="diseño web, frontend developer, diseñadora web freelance, desarrollo web, portafolio web">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Marycarmen Vives | Diseñadora Web Freelance">
-  <meta property="og:description" content="Portafolio profesional de desarrollo web">
+  <meta property="og:description" content="Portafolio de Marycarmen Vives Hurtado">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://maryvh08.github.io/">
   <meta property="og:image" content="https://maryvh08.github.io/assets/og-image.png">
 
-  <link rel="icon" href="assets/favicon/favicon.ico">
+  <!-- Identity -->
+  <link rel="me" href="https://www.linkedin.com/in/marycarmen-vives-hurtado/">
 
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -31,49 +41,51 @@
 
   <div class="nav-right">
     <div class="nav-links">
-      <a href="#about" data-i18n="nav.about"></a>
-      <a href="#services" data-i18n="nav.services"></a>
-      <a href="#projects" data-i18n="nav.projects"></a>
-      <a href="#contact" data-i18n="nav.contact"></a>
+      <a href="#about" data-i18n="nav.about">Sobre mí</a>
+      <a href="#services" data-i18n="nav.services">Servicios</a>
+      <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+      <a href="#contact" data-i18n="nav.contact">Contacto</a>
     </div>
 
-    <button id="languageToggle" class="language-toggle">
+    <button id="languageToggle" class="language-toggle" aria-label="Cambiar idioma">
       🇺🇸 EN
     </button>
   </div>
 </nav>
 
 <!-- HERO -->
-  <header class="hero">
-    <h1 data-i18n="hero.title">
-    Diseñadora Web & Frontend Developer
-  </h1>
-  
-  <p data-i18n="hero.subtitle">
-    Creo experiencias digitales modernas y funcionales
+<header class="hero">
+  <h1>Mi nombre es Marycarmen Vives Hurtado y me encanta diseñar</h1>
+
+  <p>
+    Soy <strong>Web Designer & Developer freelance</strong>.
+    Creo sitios web que conectan diseño, usabilidad y objetivos reales.
   </p>
 
   <div class="hero-buttons">
-    <a href="#contact" class="btn primary" data-i18n="Contáctame"></a>
-    <a href="CV Marycarmen Vives Hurtado ES.pdf" class="btn secondary" download data-i18n="Descarga mi CV"></a>
+    <a href="#contact" class="btn primary">Contáctame</a>
+    <a href="CV Marycarmen Vives Hurtado ES.pdf" class="btn secondary" download>Descargar CV</a>
   </div>
 </header>
 
 <!-- ABOUT -->
 <section id="about" class="about reveal">
-  <h2 data-i18n="about.title"></h2>
-  <p data-i18n="about.text"></p>
+  <h2>Sobre mí</h2>
+  <p>
+    Vengo de Barranquilla. Me apasiona el diseño en todas sus formas: piezas multimedia, publicidad y desarrollo web.
+    Creo firmemente que un buen diseño es el primer gancho para atraer usuarios a un producto.
+  </p>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="services reveal">
-  <h2 data-i18n="Servicios"></h2>
+  <h2>Servicios</h2>
 
   <div class="services-grid">
-    <div data-i18n="Diseño Web Profesional"></div>
-    <div data-i18n="Desarrollo Web a Medida"></div>
-    <div data-i18n="Landing Pages"></div>
-    <div data-i18n="Automatización"></div>
+    <div class="service-card">Diseño Web Profesional</div>
+    <div class="service-card">Desarrollo Web a Medida</div>
+    <div class="service-card">Landing Pages</div>
+    <div class="service-card">Automatización</div>
   </div>
 </section>
 
@@ -138,23 +150,34 @@
 
 <!-- CONTACT -->
 <section id="contact" class="contact reveal">
-  <h2 data-i18n="contact.title"></h2>
-  <p data-i18n="contact.text"></p>
+  <h2>Contacto</h2>
+  <p>Escríbeme para trabajar juntos</p>
 
   <form class="contact-form"
         action="https://formspree.io/f/mrebneoj"
         method="POST">
 
-    <input type="text" name="name" placeholder="Nombre" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Mensaje" required></textarea>
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" name="name" required>
+    </div>
 
-    <button class="btn primary" type="submit" data-i18n="contact.cta"></button>
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
+
+    <button class="btn primary" type="submit">Enviar mensaje</button>
   </form>
 
   <div class="contact-buttons">
-    <a href="https://www.linkedin.com/in/marycarmen-vives-hurtado/" target="_blank" class="btn secondary">LinkedIn</a>
-    <a href="https://github.com/maryvh08" target="_blank" class="btn secondary">GitHub</a>
+    <a href="https://www.linkedin.com/in/marycarmen-vives-hurtado/" target="_blank" rel="noopener noreferrer" class="btn secondary">LinkedIn</a>
+    <a href="https://github.com/maryvh08" target="_blank" rel="noopener noreferrer" class="btn secondary">GitHub</a>
   </div>
 </section>
 
@@ -170,7 +193,7 @@
     <h3 id="modalTitle"></h3>
     <p id="modalDescription"></p>
     <p id="modalTech"></p>
-    <a id="modalLink" class="btn primary" target="_blank">Ver proyecto</a>
+    <a id="modalLink" class="btn primary" target="_blank" rel="noopener">Ver proyecto</a>
   </div>
 </div>
 
