@@ -6,30 +6,20 @@
 
   <title>Marycarmen Vives | Diseñadora Web & Frontend Developer Freelance</title>
 
-  <!-- SEO -->
   <meta name="description" content="Portafolio de Marycarmen Vives, diseñadora web y frontend developer freelance.">
-  <meta name="keywords" content="diseño web, frontend developer, diseñadora web freelance, desarrollo web, portafolio web">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Marycarmen Vives | Diseñadora Web Freelance">
-  <meta property="og:description" content="Portafolio de Marycarmen Vives Hurtado">
+  <meta property="og:description" content="Portafolio profesional de desarrollo web">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://maryvh08.github.io/">
   <meta property="og:image" content="https://maryvh08.github.io/assets/og-image.png">
 
-  <!-- Identity -->
-  <link rel="me" href="https://www.linkedin.com/in/marycarmen-vives-hurtado/">
-
-  <!-- Favicon -->
   <link rel="icon" href="assets/favicon/favicon.ico">
-  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -41,13 +31,13 @@
 
   <div class="nav-right">
     <div class="nav-links">
-      <a href="#about" data-i18n="nav.about">Sobre mí</a>
-      <a href="#services" data-i18n="nav.services">Servicios</a>
-      <a href="#projects" data-i18n="nav.projects">Proyectos</a>
-      <a href="#contact" data-i18n="nav.contact">Contacto</a>
+      <a href="#about" data-i18n="nav.about"></a>
+      <a href="#services" data-i18n="nav.services"></a>
+      <a href="#projects" data-i18n="nav.projects"></a>
+      <a href="#contact" data-i18n="nav.contact"></a>
     </div>
 
-    <button id="languageToggle" class="language-toggle" aria-label="Cambiar idioma">
+    <button id="languageToggle" class="language-toggle">
       🇺🇸 EN
     </button>
   </div>
@@ -55,49 +45,43 @@
 
 <!-- HERO -->
 <header class="hero">
-  <h1>Mi nombre es Marycarmen Vives Hurtado y me encanta diseñar</h1>
+  <h1 data-i18n="hero.title"></h1>
 
-  <p>
-    Soy <strong>Web Designer & Developer freelance</strong>.
-    Creo sitios web que conectan diseño, usabilidad y objetivos reales.
-  </p>
+  <p data-i18n="hero.subtitle"></p>
 
   <div class="hero-buttons">
-    <a href="#contact" class="btn primary">Contáctame</a>
-    <a href="CV Marycarmen Vives Hurtado ES.pdf" class="btn secondary" download>Descargar CV</a>
+    <a href="#contact" class="btn primary" data-i18n="hero.cta1"></a>
+    <a href="CV Marycarmen Vives Hurtado ES.pdf" class="btn secondary" download data-i18n="hero.cta2"></a>
   </div>
 </header>
 
 <!-- ABOUT -->
 <section id="about" class="about reveal">
-  <h2>Sobre mí</h2>
-  <p>
-    Vengo de Barranquilla. Me apasiona el diseño en todas sus formas: piezas multimedia, publicidad y desarrollo web.
-    Creo firmemente que un buen diseño es el primer gancho para atraer usuarios a un producto.
-  </p>
+  <h2 data-i18n="about.title"></h2>
+  <p data-i18n="about.text"></p>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="services reveal">
-  <h2>Servicios</h2>
+  <h2 data-i18n="services.title"></h2>
 
   <div class="services-grid">
-    <div class="service-card">Diseño Web Profesional</div>
-    <div class="service-card">Desarrollo Web a Medida</div>
-    <div class="service-card">Landing Pages</div>
-    <div class="service-card">Automatización</div>
+    <div data-i18n="services.webDesign"></div>
+    <div data-i18n="services.webDev"></div>
+    <div data-i18n="services.landingPages"></div>
+    <div data-i18n="services.automation"></div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="projects reveal">
-  <h2>Proyectos</h2>
+  <h2 data-i18n="projects.title"></h2>
 
   <div class="projects-grid">
 
     <article class="project-card" tabindex="0"
       data-title="Portal de Transparencia"
-      data-description="Plataforma web interactiva para gestión de proyectos."
+      data-description="Plataforma web interactiva para gestión de proyectos"
       data-tech="HTML · CSS · JavaScript"
       data-link="https://portaldetransparencia.vercel.app/">
       <h3>Portal de Transparencia</h3>
@@ -107,7 +91,7 @@
 
     <article class="project-card" tabindex="0"
       data-title="SIGEDA Capitular"
-      data-description="Gestión documental institucional."
+      data-description="Gestión documental institucional"
       data-tech="Google Sites · UX"
       data-link="https://sites.google.com/aneiap.co/sigeda-capitular-uninorte/inicio">
       <h3>SIGEDA Capitular</h3>
@@ -117,31 +101,11 @@
 
     <article class="project-card" tabindex="0"
       data-title="EvalHVAN"
-      data-description="Análisis de perfiles de candidatos."
+      data-description="Análisis de perfiles de candidatos"
       data-tech="Python · Streamlit"
       data-link="https://evalhv-uvgdqtpnuheurqmrzdnnnb.streamlit.app/">
       <h3>EvalHVAN</h3>
       <p>Análisis de perfiles</p>
-      <span class="project-overlay">Ver proyecto →</span>
-    </article>
-
-    <article class="project-card" tabindex="0"
-      data-title="Chat GDC"
-      data-description="Chatbot documental."
-      data-tech="Google Apps Script"
-      data-link="https://script.google.com/a/macros/aneiap.co/s/AKfycbyvObGwLD9uvDhDWroME8V_qP80WKkM54M9LxKxlCMrl66cOKM_R23yWKkR94hHpVim/exec">
-      <h3>Chat GDC</h3>
-      <p>Chatbot documental</p>
-      <span class="project-overlay">Ver proyecto →</span>
-    </article>
-
-    <article class="project-card" tabindex="0"
-      data-title="Panel de Procesos Capitular"
-      data-description="Dashboard de procesos capitulares."
-      data-tech="Data Studio"
-      data-link="https://datastudio.google.com/reporting/b9cfa6d3-75a6-48b0-abf2-275bccff7223">
-      <h3>Panel de Procesos</h3>
-      <p>Dashboard</p>
       <span class="project-overlay">Ver proyecto →</span>
     </article>
 
@@ -150,34 +114,23 @@
 
 <!-- CONTACT -->
 <section id="contact" class="contact reveal">
-  <h2>Contacto</h2>
-  <p>Escríbeme para trabajar juntos</p>
+  <h2 data-i18n="contact.title"></h2>
+  <p data-i18n="contact.text"></p>
 
   <form class="contact-form"
         action="https://formspree.io/f/mrebneoj"
         method="POST">
 
-    <div class="form-group">
-      <label for="name">Nombre</label>
-      <input type="text" id="name" name="name" required>
-    </div>
+    <input type="text" name="name" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Mensaje" required></textarea>
 
-    <div class="form-group">
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-
-    <div class="form-group">
-      <label for="message">Mensaje</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-    </div>
-
-    <button class="btn primary" type="submit">Enviar mensaje</button>
+    <button class="btn primary" type="submit" data-i18n="contact.cta"></button>
   </form>
 
   <div class="contact-buttons">
-    <a href="https://www.linkedin.com/in/marycarmen-vives-hurtado/" target="_blank" rel="noopener noreferrer" class="btn secondary">LinkedIn</a>
-    <a href="https://github.com/maryvh08" target="_blank" rel="noopener noreferrer" class="btn secondary">GitHub</a>
+    <a href="https://www.linkedin.com/in/marycarmen-vives-hurtado/" target="_blank" class="btn secondary">LinkedIn</a>
+    <a href="https://github.com/maryvh08" target="_blank" class="btn secondary">GitHub</a>
   </div>
 </section>
 
@@ -193,7 +146,7 @@
     <h3 id="modalTitle"></h3>
     <p id="modalDescription"></p>
     <p id="modalTech"></p>
-    <a id="modalLink" class="btn primary" target="_blank" rel="noopener">Ver proyecto</a>
+    <a id="modalLink" class="btn primary" target="_blank">Ver proyecto</a>
   </div>
 </div>
 
