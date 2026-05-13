@@ -71,3 +71,87 @@ contactDrawer.addEventListener('click', e => {
   }
 });
 
+const translations = {
+  es: {
+    "nav.about": "Sobre mí",
+    "nav.services": "Servicios",
+    "nav.projects": "Proyectos",
+    "nav.contact": "Contacto",
+
+    "hero.intro": "Hola, soy Marycarmen Vives",
+    "hero.title": "Diseño y desarrollo web profesional",
+    "hero.subtitle": "Creo experiencias digitales modernas y funcionales.",
+    "hero.cta1": "Contáctame",
+    "hero.cta2": "Descargar CV",
+
+    "about.title": "Sobre mí",
+    "about.text1": "Soy diseñadora web y frontend freelance...",
+    "about.text2": "Me apasiona crear experiencias digitales claras.",
+
+    "services.title": "Servicios",
+
+    "projects.title": "Proyectos destacados",
+
+    "contact.title": "¿Trabajamos juntos?",
+    "contact.text": "Si tienes una idea o proyecto, hablemos.",
+  },
+
+  en: {
+    "nav.about": "About",
+    "nav.services": "Services",
+    "nav.projects": "Projects",
+    "nav.contact": "Contact",
+
+    "hero.intro": "Hi, I'm Marycarmen Vives",
+    "hero.title": "Professional web design and development",
+    "hero.subtitle": "I create modern and functional digital experiences.",
+    "hero.cta1": "Contact me",
+    "hero.cta2": "Download CV",
+
+    "about.title": "About me",
+    "about.text1": "I'm a freelance web designer and frontend developer...",
+    "about.text2": "I love creating clear digital experiences.",
+
+    "services.title": "Services",
+
+    "projects.title": "Featured projects",
+
+    "contact.title": "Let's work together?",
+    "contact.text": "If you have an idea or project, let's talk.",
+  }
+};
+
+let currentLang = "es";
+
+function setLanguage(lang) {
+  currentLang = lang;
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    el.textContent = translations[lang][key] || "";
+  });
+
+  // cambia atributo del HTML (bueno para SEO y accesibilidad)
+  document.documentElement.lang = lang;
+
+  // guarda preferencia
+  localStorage.setItem("lang", lang);
+}
+
+document.getElementById("languageToggle").addEventListener("click", () => {
+  const newLang = currentLang === "es" ? "en" : "es";
+  setLanguage(newLang);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "es";
+  setLanguage(savedLang);
+});
+
+function updateToggleButton() {
+  const btn = document.getElementById("languageToggle");
+
+  btn.textContent = currentLang === "es"
+    ? "🇺🇸 EN"
+    : "🇪🇸 ES";
+}
