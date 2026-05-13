@@ -8,6 +8,14 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 
+const langBtn = document.getElementById("languageToggle");
+
+if (langBtn) {
+  langBtn.addEventListener("click", () => {
+    const newLang = currentLang === "es" ? "en" : "es";
+    setLanguage(newLang);
+  });
+}
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // ===== MODAL / DRAWER =====
@@ -155,3 +163,14 @@ function updateToggleButton() {
     ? "🇺🇸 EN"
     : "🇪🇸 ES";
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const langBtn = document.getElementById("languageToggle");
+
+  if (!langBtn) return;
+
+  langBtn.addEventListener("click", () => {
+    const newLang = currentLang === "es" ? "en" : "es";
+    setLanguage(newLang);
+  });
+});
