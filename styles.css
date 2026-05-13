@@ -369,3 +369,25 @@ h1, h2, h3, p {
     flex-direction: column;
   }
 }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-toggle {
+  border: 1px solid #2a2a2a;
+  background: #111;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.25s ease;
+}
+
+.language-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
