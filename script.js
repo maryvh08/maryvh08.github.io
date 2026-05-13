@@ -103,19 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "contact.title": "Contacto",
       "contact.text": "Escríbeme para trabajar juntos"
     },
-
-    en: {
-      "nav.about": "About",
-      "nav.services": "Services",
-      "nav.projects": "Projects",
-      "nav.contact": "Contact",
-
-      "about.title": "About me",
-      "services.title": "Services",
-      "projects.title": "Projects",
-      "contact.title": "Contact",
-      "contact.text": "Reach out to work together"
-    }
   };
 
   let currentLang = "es";
