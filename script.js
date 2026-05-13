@@ -1,84 +1,90 @@
 // ===== REVEAL =====
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
 
-const langBtn = document.getElementById("languageToggle");
+document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-if (langBtn) {
-  langBtn.addEventListener("click", () => {
-    const newLang = currentLang === "es" ? "en" : "es";
-    setLanguage(newLang);
-  });
-}
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// ===== MODAL / DRAWER =====
-const modal = document.getElementById('projectModal');
-const modalTitle = document.getElementById('modalTitle');
-const modalDescription = document.getElementById('modalDescription');
-const modalTech = document.getElementById('modalTech');
-const modalLink = document.getElementById('modalLink');
-const closeModal = document.querySelector('.close-modal');
+// ===== MODAL / PROYECTOS =====
+const modal = document.getElementById("projectModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const modalTech = document.getElementById("modalTech");
+const modalLink = document.getElementById("modalLink");
+const closeModal = document.querySelector(".close-modal");
 
-document.querySelectorAll('.project-card').forEach(card => {
-  card.addEventListener('click', () => {
+document.querySelectorAll(".project-card").forEach((card) => {
+  card.addEventListener("click", () => {
     modalTitle.textContent = card.dataset.title;
     modalDescription.textContent = card.dataset.description;
     modalTech.textContent = card.dataset.tech;
     modalLink.href = card.dataset.link;
 
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
   });
 
-  card.addEventListener('keydown', e => {
-    if (e.key === 'Enter') card.click();
+  card.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") card.click();
   });
 });
 
-closeModal.addEventListener('click', () => {
-  modal.classList.remove('active');
-  document.body.style.overflow = '';
-});
+if (closeModal) {
+  closeModal.addEventListener("click", () => {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  });
+}
 
-modal.addEventListener('click', e => {
-  if (e.target === modal) {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-});
+if (modal) {
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+}
+
+
 // ===== CONTACT DRAWER =====
-const openDrawerBtn = document.querySelector('.open-drawer');
-const contactDrawer = document.getElementById('contactDrawer');
-const closeDrawerBtn = document.querySelector('.close-drawer');
+const openDrawerBtn = document.querySelector(".open-drawer");
+const contactDrawer = document.getElementById("contactDrawer");
+const closeDrawerBtn = document.querySelector(".close-drawer");
 
-if (openDrawerBtn) {
-  openDrawerBtn.addEventListener('click', () => {
-    contactDrawer.classList.add('active');
-    document.body.style.overflow = 'hidden';
+if (openDrawerBtn && contactDrawer) {
+  openDrawerBtn.addEventListener("click", () => {
+    contactDrawer.classList.add("active");
+    document.body.style.overflow = "hidden";
   });
 }
 
-if (closeDrawerBtn) {
-  closeDrawerBtn.addEventListener('click', () => {
-    contactDrawer.classList.remove('active');
-    document.body.style.overflow = '';
+if (closeDrawerBtn && contactDrawer) {
+  closeDrawerBtn.addEventListener("click", () => {
+    contactDrawer.classList.remove("active");
+    document.body.style.overflow = "";
   });
 }
 
-contactDrawer.addEventListener('click', e => {
-  if (e.target === contactDrawer) {
-    contactDrawer.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-});
+if (contactDrawer) {
+  contactDrawer.addEventListener("click", (e) => {
+    if (e.target === contactDrawer) {
+      contactDrawer.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+}
 
+
+// ===== I18N (IDIOMAS) =====
 const translations = {
   es: {
     "nav.about": "Sobre mí",
@@ -101,7 +107,7 @@ const translations = {
     "projects.title": "Proyectos destacados",
 
     "contact.title": "¿Trabajamos juntos?",
-    "contact.text": "Si tienes una idea o proyecto, hablemos.",
+    "contact.text": "Si tienes una idea o proyecto, hablemos."
   },
 
   en: {
@@ -125,7 +131,7 @@ const translations = {
     "projects.title": "Featured projects",
 
     "contact.title": "Let's work together?",
-    "contact.text": "If you have an idea or project, let's talk.",
+    "contact.text": "If you have an idea or project, let's talk."
   }
 };
 
@@ -134,43 +140,39 @@ let currentLang = "es";
 function setLanguage(lang) {
   currentLang = lang;
 
-  document.querySelectorAll("[data-i18n]").forEach(el => {
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     el.textContent = translations[lang][key] || "";
   });
 
-  // cambia atributo del HTML (bueno para SEO y accesibilidad)
   document.documentElement.lang = lang;
-
-  // guarda preferencia
   localStorage.setItem("lang", lang);
+
+  updateToggleButton();
 }
-
-document.getElementById("languageToggle").addEventListener("click", () => {
-  const newLang = currentLang === "es" ? "en" : "es";
-  setLanguage(newLang);
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("lang") || "es";
-  setLanguage(savedLang);
-});
 
 function updateToggleButton() {
   const btn = document.getElementById("languageToggle");
+
+  if (!btn) return;
 
   btn.textContent = currentLang === "es"
     ? "🇺🇸 EN"
     : "🇪🇸 ES";
 }
 
+
+// ===== INIT =====
 document.addEventListener("DOMContentLoaded", () => {
   const langBtn = document.getElementById("languageToggle");
 
-  if (!langBtn) return;
+  if (langBtn) {
+    langBtn.addEventListener("click", () => {
+      const newLang = currentLang === "es" ? "en" : "es";
+      setLanguage(newLang);
+    });
+  }
 
-  langBtn.addEventListener("click", () => {
-    const newLang = currentLang === "es" ? "en" : "es";
-    setLanguage(newLang);
-  });
+  const savedLang = localStorage.getItem("lang") || "es";
+  setLanguage(savedLang);
 });
