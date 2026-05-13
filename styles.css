@@ -308,15 +308,20 @@ ul{
 }
 
 /* ======================================================
-   ABOUT
+   ABOUT ALINEADO A LA IZQUIERDA
 ====================================================== */
+
 .about{
   display:flex;
   flex-direction:column;
 
+  align-items:flex-start;
+
   gap:2rem;
 
   max-width:820px;
+
+  margin:0;
 }
 
 .about-content{
@@ -324,6 +329,8 @@ ul{
 }
 
 .about-content p{
+  text-align:left;
+
   margin-bottom:1.4rem;
 
   font-size:1rem;
@@ -331,6 +338,8 @@ ul{
 }
 
 .about-stats{
+  width:100%;
+
   display:grid;
 
   grid-template-columns:
@@ -339,6 +348,22 @@ ul{
   gap:1rem;
 
   margin-top:1rem;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media(max-width:950px){
+
+  .about{
+    max-width:100%;
+    align-items:flex-start;
+  }
+
+  .about-content{
+    width:100%;
+  }
 }
 
 /* ======================================================
