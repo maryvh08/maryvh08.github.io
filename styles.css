@@ -308,16 +308,23 @@ ul{
 }
 
 /* ======================================================
-   ABOUT
+   ABOUT ALINEADO IGUAL QUE EL HERO
 ====================================================== */
 
 .about{
-  width:100%;
+  width:min(1180px,92%);
+  margin:auto;
+
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+
+  gap:2rem;
 }
 
 .about-content{
   width:100%;
-  max-width:900px;
+  max-width:720px;
 }
 
 .about-content p{
@@ -331,6 +338,7 @@ ul{
 
 .about-stats{
   width:100%;
+  max-width:720px;
 
   display:grid;
 
@@ -339,7 +347,7 @@ ul{
 
   gap:1rem;
 
-  margin-top:2rem;
+  margin-top:1rem;
 }
 
 /* ======================================================
