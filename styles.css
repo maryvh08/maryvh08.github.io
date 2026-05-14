@@ -215,9 +215,9 @@ ul{
 }
 
 .hero h1{
-  max-width:720px;
+  max-width:980px;
 
-  font-size:clamp(2.4rem,5vw,4.2rem);
+  font-size:clamp(2.8rem,5vw,4.5rem);
 
   line-height:1.08;
   letter-spacing:-0.04em;
@@ -226,10 +226,10 @@ ul{
 }
 
 .hero p{
-  max-width:680px;
+  max-width:900px;
 
-  font-size:1.05rem;
-  line-height:1.8;
+  font-size:1.08rem;
+  line-height:1.9;
 
   color:var(--text-secondary);
 }
